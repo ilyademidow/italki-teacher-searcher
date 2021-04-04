@@ -7,7 +7,7 @@ It provides inbuilt search but you can't sort teachers by their real lowest pric
  
 ## Solution
 By default the script searches English native speakers. If you want to modify some parameters please find it in script constants at the beginning of the script.
-1. Copy all content of the script
+1. Copy all content of the `index.js`
 1. Open https://italki.com in your browser
 1. Open developer tools (usually press `F12`)
 1. Open `Console` tab
