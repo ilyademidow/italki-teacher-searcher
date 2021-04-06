@@ -1,0 +1,15 @@
+{
+  "name": "italki-teacher-searcher",
+  "version": "1.0.0",
+  "description": "Find teacher real lowest price and sort teacher",
+  "main": "index.js",
+  "scripts": {
+    "compress": "rm index-inline.js; minify index.js --out-file index-inline.js --mangle.keepClassName"
+  },
+  "author": "ilyademidow",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-minify": "^0.5.1"
+  }
+}

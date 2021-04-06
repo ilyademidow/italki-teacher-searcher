@@ -102,6 +102,8 @@ function getLowestPrice(teacher) {
 }
 
 async function main() {
+    let loadingSpinner = "<div id='loading' style='position: absolute;top: 10em;width: 120px;height: 120px;left: calc(50% - 50px);background: url(https://acegif.com/wp-content/uploads/loading-25.gif);background-size: 120px 120px;z-index: 100;'></div>";
+    document.getElementsByTagName("body")[0].innerHTML = loadingSpinner;
     let content = '<tr><td><h3>Price</h3></td><td><h3>Name</h3></td><td></td><td><h3>Country</h3></td><td><h3>Greeting video</h3></td><td><h3>Link</h3></td></tr>';
     await getTeacherList(1);
 
@@ -123,7 +125,6 @@ async function main() {
         content = content + '<tr><td><h1>' + (newTc.price / 100) + ' $</h1></td><td><h1>' + newTc.name + '</h1></td><td>' + newTc.originCountryId + '</td><td><img src="https://scdn.italki.com/orion/static/flags/' + newTc.originCountryId.toLowerCase() + '.svg" class="ant-avatar" /></td>' +
             '<td><video controls width="360px" height="200px"><source src="' + newTc.greetVideo + '" type="video/mp4" /></video></td><td><a href="' + newTc.url + '">Personal page</a></td></tr>';
     });
-
     document.getElementsByTagName("body")[0].innerHTML = "<center><h1>Teacher list sort by price</h1></center><table>" + content + "</table>";
 }
 
